@@ -147,3 +147,78 @@ q.append(2)
 # print(q.popleft())
 print(q.pop())
 print(q)
+
+# searchings
+# linear search
+
+arr = [1,2,3,4]
+
+target = 3
+
+for num in arr:
+    if num == target:
+        print(f"{target} Found")
+
+# binary search
+
+arr = [1,2,3,4,5,6]
+
+target = 5
+
+left = 0
+right = len(arr)-1
+
+while left <= right:
+
+    mid = (left + right)//2
+
+    if arr[mid] == target:
+        print("Found")
+        break
+
+    elif arr[mid] < target:
+        left = mid + 1
+
+    else:
+        right = mid - 1
+
+# sorting
+# bubble sort
+
+arr = [5, 2, 9, 1]
+n = len(arr)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+
+print(arr)
+
+
+# link list
+
+class Node:
+
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+head = Node(10)
+
+print(head.data)
+
+# trees
+
+class TreeNode:
+
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+root = TreeNode(1)
+
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+
+print(root.left.data)
